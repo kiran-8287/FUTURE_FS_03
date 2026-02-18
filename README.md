@@ -2,60 +2,64 @@
 
 A premium campus café web application designed for a seamless ordering experience. **Brew & Code** combines modern web aesthetics with functional features like real-time menu management, a sophisticated cart system, and campus-wide delivery options.
 
+🎨 Features
+- **Modern UI/UX**: Built with React & Tailwind CSS for a sleek, responsive design.
+- **Glassmorphism**: Elegant frosted glass effects across the interface (Navbar, Item Cards).
+- **Interactive Elements**:
+    - **Developer-Themed About Section**: A unique VS Code styled interface.
+    - **Animated Item Detail Sheets**: Smooth slide-ups for item customizations.
+    - **Bento-style Landing Page**: Organized layouts for Hero, Gallery, and Menu previews.
+    - **Confetti Celebrations**: Engaging feedback on order confirmation.
+- **Cart System**: Advanced state management with `useReducer` for unique item IDs and customizations.
+- **Campus-Ready**: Integrated delivery/pickup toggles with specific hostel/room support.
+- **Performance**: Optimized with Vite for lightning-fast HMR and build times.
 
-## 🚀 Key Features
+📂 Project Structure
+```text
+src/
+├── components/      # Reusable UI modules (ItemDetailSheet, Navbar, Hero, etc.)
+├── pages/           # Main application views (Home, Menu, Cart, OrderConfirm)
+├── context/         # Cart state management (CartContext)
+├── data/            # Menu database (menuData.js)
+├── hooks/           # Custom React hooks (IntersectionObserver, ScrollPosition)
+└── menu images/     # Local high-quality menu assets
+```
 
--   **Interactive Menu**: Smooth categorized navigation with real-time filtering and search.
--   **Advanced Cart System**: Seamlessly customize items, apply coupons (Try `CAMPUS20`), and manage quantities.
--   **Smart Delivery Options**: Choose between "Self Pickup" or "Campus Delivery" with hostel/room detail support.
--   **Developer UI Aesthetic**: Includes a unique "About" section styled as a VS Code environment.
--   **Fully Responsive**: Optimized for both mobile and desktop experiences with a dedicated mobile navigation bar.
--   **Confetti Celebrations**: Engaging feedback on successful orders.
+⚡ Getting Started
 
-## 🛠️ Tech Stack
+Prerequisites
+- Node.js (v18+ recommended)
+- npm or yarn
 
--   **Frontend**: [React 18](https://reactjs.org/) + [Vite](https://vitejs.dev/)
--   **Styling**: [Tailwind CSS](https://tailwindcss.com/)
--   **Animations**: [Framer Motion](https://www.framer.com/motion/)
--   **Icons**: [Lucide React](https://lucide.dev/)
--   **State Management**: Context API + `useReducer`
--   **Notifications**: [React Hot Toast](https://react-hot-toast.com/)
+Installation
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/kiran-8287/FUTURE_FS_03
+   cd FUTURE_FS_03
+   ```
 
-## 📂 Project Structure
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-The project follows a standard `src/` directory convention for modularity and scalability:
+3. **Set environment variables**
+   Create a `.env.local` file:
+   ```env
+   GEMINI_API_KEY=your_gen_ai_key
+   ```
 
--   `src/components/`: Reusable UI modules (Item Cards, Navbar, etc.)
--   `src/pages/`: Main application views (Home, Menu, Cart, Confirm)
--   `src/context/`: Global state management for orders.
--   `src/data/`: Centralized menu item database.
--   `src/hooks/`: Custom React hooks for scroll and intersections.
--   `src/menu images/`: Local high-quality menu assets.
+4. **Start development server**
+   ```bash
+   npm run dev
+   ```
 
-## ⚙️ How to Run Locally
+🚀 Deployment
+Vercel (Recommended)
+1. Install Vercel CLI: `npm i -g vercel`
+2. Run `vercel login`
+3. Run `vercel` inside the project folder
+4. Follow the prompts!
 
-1.  **Clone the Repository**:
-    ```bash
-    git clone https://github.com/kiran-8287/FUTURE_FS_03.git
-    cd FUTURE_FS_03
-    ```
-
-2.  **Install Dependencies**:
-    ```bash
-    npm install
-    ```
-
-3.  **Set Environment Variables**:
-    Create a `.env.local` file and add:
-    ```env
-    GEMINI_API_KEY=your_api_key_here
-    ```
-
-4.  **Start Development Server**:
-    ```bash
-    npm run dev
-    ```
-
-## 📜 License
-
+📜 License
 Project created for education and portfolio purposes.
