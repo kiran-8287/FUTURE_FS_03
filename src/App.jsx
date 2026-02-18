@@ -36,17 +36,8 @@ const ScrollToTop = () => {
 const App = () => {
     const [isLoading, setIsLoading] = useState(true);
 
-    // Check session storage to show loader only once
-    useEffect(() => {
-        const hasLoaded = sessionStorage.getItem('hasLoaded');
-        if (hasLoaded) {
-            setIsLoading(false);
-        }
-    }, []);
-
     const handleLoadComplete = () => {
         setIsLoading(false);
-        sessionStorage.setItem('hasLoaded', 'true');
     };
 
     return (
