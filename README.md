@@ -2,7 +2,6 @@
 
 A premium campus café web application designed for a seamless ordering experience. **Brew & Code** combines modern web aesthetics with functional features like real-time menu management, a sophisticated cart system, and campus-wide delivery options.
 
-![GHBanner](https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6)
 
 ## 🚀 Key Features
 
