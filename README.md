@@ -43,13 +43,7 @@ Installation
    npm install
    ```
 
-3. **Set environment variables**
-   Create a `.env.local` file:
-   ```env
-   GEMINI_API_KEY=your_gen_ai_key
-   ```
-
-4. **Start development server**
+3. **Start development server**
    ```bash
    npm run dev
    ```
