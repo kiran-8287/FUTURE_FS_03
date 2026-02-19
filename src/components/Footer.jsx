@@ -16,7 +16,7 @@ const Footer = () => {
 
                 <div className="text-sm">
                     <p>&copy; {new Date().getFullYear()} Brew & Code. All rights reserved.</p>
-                    <p className="mt-1">Made with ☕ inside campus</p>
+                    <p className="mt-1">Made with a little bit of code and a lot of ☕ !</p>
                 </div>
             </div>
         </footer>

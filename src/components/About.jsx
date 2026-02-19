@@ -1,5 +1,7 @@
 import React from 'react';
 import { Terminal, Zap, Coffee, Heart, Star, ChevronRight, Lightbulb, Users, Target, Home, GraduationCap } from 'lucide-react';
+import cafeVideo from '../videos/cafe.mp4';
+
 
 const About = () => {
     const features = [
@@ -16,13 +18,33 @@ const About = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
                 {/* Header */}
-                <div className="text-center mb-16">
-                    <h2 className="font-serif text-4xl md:text-5xl font-bold text-coffee-900 mb-3">
-                        System Overclocked
-                    </h2>
-                    <p className="font-mono text-coffee-500 text-sm md:text-base">
-                // Core Architecture & Mission Statement
-                    </p>
+                <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 mb-16">
+                    <div className="text-center lg:text-left flex-grow">
+                        <h2 className="font-serif text-4xl md:text-5xl font-bold text-coffee-900 mb-3">
+                            System Overclocked
+                        </h2>
+                        <p className="font-mono text-coffee-500 text-sm md:text-base">
+                            // Core Architecture & Mission Statement
+                        </p>
+                    </div>
+                    <div className="w-64 h-64 rounded-2xl overflow-hidden shadow-2xl relative group shrink-0">
+                        <video
+                            src={cafeVideo}
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-brand-red/10 group-hover:bg-transparent transition-colors duration-300" />
+                        <div className="absolute bottom-2 right-3">
+                            <div className="flex gap-1">
+                                <div className="w-1.5 h-1.5 rounded-full bg-brand-red animate-pulse" />
+                                <div className="w-1.5 h-1.5 rounded-full bg-brand-red animate-pulse [animation-delay:0.2s]" />
+                                <div className="w-1.5 h-1.5 rounded-full bg-brand-red animate-pulse [animation-delay:0.4s]" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 {/* Top Row: Code Block + Stats */}
@@ -119,8 +141,14 @@ const About = () => {
                             ))}
                         </ul>
 
-                        <div className="font-mono text-xs md:text-sm text-coffee-500 bg-coffee-50 p-4 rounded-lg border-l-4 border-coffee-900 inline-block">
-                            {'>'} git commit -m "No hierarchy. No judgement. Just coffee."
+                        <div className="mt-6 inline-block bg-coffee-900 rounded-xl px-5 py-3 border border-coffee-100/10 shadow-xl group hover:border-brand-red/40 transition-all duration-300">
+                            <code className="font-mono text-xs sm:text-sm leading-relaxed">
+                                <span className="text-brand-red mr-2 font-bold">$</span>
+                                <span className="text-brand-gold">git commit</span>
+                                <span className="text-coffee-300 mx-1.5">-m</span>
+                                <span className="text-green-400">"No hierarchy. No judgement. Just coffee."</span>
+                                <span className="ml-1 w-2 h-4 bg-brand-red/50 animate-pulse inline-block align-middle" />
+                            </code>
                         </div>
                     </div>
 

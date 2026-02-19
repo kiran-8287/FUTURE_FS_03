@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import { Check, ArrowRight, MapPin, Clock } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { useCart } from '../context/CartContext';
+import coffeeVideo from '../videos/coffee.mp4';
+
 
 const OrderConfirmPage = () => {
     const { clearCart } = useCart();
@@ -55,14 +57,34 @@ const OrderConfirmPage = () => {
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#4A2C2A 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
 
-            <motion.div
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                className="w-24 h-24 bg-brand-green rounded-full flex items-center justify-center mb-8 relative z-10 shadow-2xl shadow-brand-green/30"
-            >
-                <Check size={48} className="text-white" strokeWidth={4} />
-            </motion.div>
+            {/* Video & Checkmark Container */}
+            <div className="relative mb-8 z-10">
+                <motion.div
+                    initial={{ scale: 0, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ type: "spring", stiffness: 150, damping: 15 }}
+                    className="w-48 h-48 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl relative"
+                >
+                    <video
+                        src={coffeeVideo}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-full object-cover scale-125"
+                    />
+                    <div className="absolute inset-0 bg-brand-red/10" />
+                </motion.div>
+
+                <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ type: "spring", stiffness: 200, damping: 20, delay: 0.5 }}
+                    className="absolute -bottom-2 -right-2 w-16 h-16 bg-brand-green rounded-full flex items-center justify-center shadow-xl border-4 border-coffee-900"
+                >
+                    <Check size={28} className="text-white" strokeWidth={4} />
+                </motion.div>
+            </div>
 
             <motion.h1
                 initial={{ opacity: 0, y: 20 }}
