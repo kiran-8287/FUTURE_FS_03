@@ -61,6 +61,7 @@ const App = () => {
                             <Route path="/menu" element={<MenuPage />} />
                             <Route path="/cart" element={<CartPage />} />
                             <Route path="/order-confirm" element={<OrderConfirmPage />} />
+                            <Route path="*" element={<HomePage />} />
                         </Routes>
 
                         <BottomNav />
