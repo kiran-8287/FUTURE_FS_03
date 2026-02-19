@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import { CartProvider } from './context/CartContext';
 import LoadingScreen from './components/LoadingScreen';
@@ -42,7 +42,7 @@ const App = () => {
 
     return (
         <CartProvider>
-            <HashRouter>
+            <BrowserRouter>
                 {isLoading && <LoadingScreen onComplete={handleLoadComplete} />}
                 {!isLoading && (
                     <div className="antialiased text-coffee-900 font-sans selection:bg-brand-red selection:text-white">
@@ -66,7 +66,7 @@ const App = () => {
                         <BottomNav />
                     </div>
                 )}
-            </HashRouter>
+            </BrowserRouter>
         </CartProvider>
     );
 };

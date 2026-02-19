@@ -38,9 +38,9 @@ const Navbar = () => {
                 <div className="hidden md:flex items-center gap-8">
                     <NavLink to="/" label="Home" textColor={textColor} />
                     <NavLink to="/menu" label="Menu" textColor={textColor} />
-                    <a href="/#gallery" className={`font-sans font-bold hover:text-brand-red transition-colors ${textColor}`}>Gallery</a>
-                    <a href="/#about" className={`font-sans font-bold hover:text-brand-red transition-colors ${textColor}`}>About</a>
-                    <a href="/#contact" className={`font-sans font-bold hover:text-brand-red transition-colors ${textColor}`}>Contact</a>
+                    <a href="#gallery" className={`font-sans font-bold hover:text-brand-red transition-colors ${textColor}`}>Gallery</a>
+                    <a href="#about" className={`font-sans font-bold hover:text-brand-red transition-colors ${textColor}`}>About</a>
+                    <a href="#contact" className={`font-sans font-bold hover:text-brand-red transition-colors ${textColor}`}>Contact</a>
                 </div>
 
                 {/* Actions */}
