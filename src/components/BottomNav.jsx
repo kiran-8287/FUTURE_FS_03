@@ -8,6 +8,9 @@ const BottomNav = () => {
     const { totalItems } = useCart();
     const location = useLocation();
 
+    const hideOnPaths = ['/cart', '/order-confirm'];
+    if (hideOnPaths.includes(location.pathname)) return null;
+
     // Hide on screens larger than md
     // Add safe area padding for iOS
     return (
